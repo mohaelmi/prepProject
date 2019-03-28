@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Simple Ecommerce Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!--///////////////////////navBar///////////////////////-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  
+    <button class="btn btn-link navbar-btn" id="btnHome">Home</button>
+    <a href="#walletDiv"><button class="btn btn-link navbar-btn" id="btnWallet">Profile</button></a>  
+    <button href="#" class="btn btn-link navbar-btn">Cart<input type="text" name="counter"disabled id="cartt"  value="0"></button>
+    <button class="btn btn-link " id="btnSginIn">Sgin in</button> 
+   
+</nav>
+
+<!--///////////////////////sgin in///////////////////////-->
+<div id="sginInPage" >
+<div class="row" >
+    <div class="col-sm-6" style="background-color: lavenderblush;">
+      <h4 id="h4"> Sign in  </h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3" style="background-color: lavenderblush;"> 
+
+      <label class="sign-in-label-input" id="label1"> Username: </label><br>
+      <label class="sign-in-label-input" id="label2"> Creditcard PIN: </label><br>
+      <label class="sign-in-label-input" id="label3"> email: </label>
+
+    </div>
+    <div class="col-sm-3" style="background-color: lavenderblush;">
+      
+      <input type="text"  id="txt1" required = "required"  class="sign-in-label-input"><br>
+      <input type="number" name="userCreditCard" id="criditNum" required = "required" min="1000" placeholder="ex 0000" class="sign-in-label-input"><br>
+      <input type="email" name="email" id="email" required = "required" class="sign-in-label-input">
+      <button type="button" id="btnSubmit" class="btn btn-success">Submit</button>
+    </div>
+ </div> 
+
+  <hr>
+</div>
+<!--///////////////////////items///////////////////////-->
+<div class="container-fluid mycontent">
+    <div class="row">
+  <div class="col-sm-4" style="background-color: lavenderblush;">
+    <img  src="http://www.oscarwinski.com/blog/wp-content/uploads/2013/04/macbook.png" alt="labtop">
+  </div>
+
+  <div class="item1Space col-sm-4 " style="background-color: lavender;">
+   
+    <h3>Description<h3>
+  </div>
+  <div class="col-sm-4">
+  <button type="button" class="btn btn-primary" id="addCart1">add cart</button>
+  <button type="button" class="btn btn-info add1" id="showCart1" value="Show cart"><a href="#cartPage">Show cart</a></button>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="col-sm-4" style="background-color: lavenderblush;">
+    <img src="https://lastbestprice.com/wp-content/uploads/2016/08/HP-ProBook-640-G2-2.png" alt ="labtop">
+  </div>
+  <div class="col-sm-4 item2Space" style="background-color: lavender;">
+    <h3>Description<h3>
+    
+  </div>
+  <div class="col-sm-4">
+  <button type="button" class="btn btn-primary" id="addCart2">add cart</button>
+  <button type="button" class="btn btn-info add2" id="showCart2"><a href="#cartPage">Show cart</a></button>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="col-sm-4" style="background-color: lavenderblush;">
+    <img src="https://i.dlpng.com/static/png/339825_thumb.png" alt="mobil">
+  </div>
+  <div class="col-sm-4 item3Space" style="background-color: lavender;">
+    <h3>Description<h3>
+  </div>
+  <div class="col-sm-4">
+  <button type="button" class="btn btn-primary" id="addCart3">add cart</button>
+  <button type="button" class="btn btn-info add3" id="showCart3"><a href="#cartPage">Show cart</a></button>
+  </div>
+  </div>
+<div>
+
+ <!-- //////////////////////  cart body /////////////// -->
+  <div class="row cartBody" id="cartPage">
+    <div class="col-sm-3 itemName" style="background-color: lavenderblush;">
+    <h4>Item Name</h4>
+    <p class="userInfo" id="itemName"></p>
+    </div>
+    <div class="col-sm-3  quantity" style="background-color: lavender;">
+    <h4>Quantity</h4>
+    <p class="userInfo" id="quantity"></p>
+    </div>   
+    <div class="col-sm-3  price" style="background-color: lavender;">
+    <h4 id="header4">Price</h4>
+    <p class="userInfo" id="price"></p>
+          
+    </div>   
+     <div class="col-sm-3  col-md-4" style="background-color: lavender;">
+     <button type="button" class="btn btn-success" id="purchase">Purchase Now</button>
+      </div>
+      
+  </div>
+
+  <!--///////////////////////Wallet///////////////////////-->
+ <div class="row" id="walletDiv">
+
+  <div class="col-sm-12" style="background-color: lavenderblush;">
+      <h3 id="h1"> User Profile </h3>
+    </div>
+
+    <div class='col-sm-12' id="walletDiv" style="background-color: lavenderblush;">
+        <p class="userInfo" id="userInf">     </p>
+
+ </div>
+ </div>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script> -->
+
+
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+<script type="text/javascript" src="main.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

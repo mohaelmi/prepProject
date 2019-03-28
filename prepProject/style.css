@@ -1,0 +1,91 @@
+
+
+img{
+	width: 100px;
+	height: 50px
+}
+
+body {
+	background-color : #ffa2c1;
+}
+
+#sginInPage{
+	background-color : #ffeff4;
+	/*width: 400px;
+	height: 400px*/
+
+	margin: auto;
+  	width: 70%;
+  	border: 1px solid green;
+  	padding: 10px;
+}
+
+#h4{
+	color: blue ;
+	font-family : Antiqua;  
+	padding-top: 15px;
+	padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+
+} 
+
+.sign-in-label-input{
+	margin: 5px;
+}
+
+#label3 {
+	padding-right: 65px;
+}
+#label2 {
+	padding-right: 28px;
+}
+
+#cartt{
+	
+	width: 15px;
+  	height: 15px;
+  	margin-left: 10px;
+	
+}
+.row{
+	margin: 30px;
+}
+#btnSubmit{
+	
+	margin-left: 70px;
+}
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 5px;
+}
+
+ .mycontent{
+	margin-top: 80px;
+	padding: 15px
+}
+
+div{
+	padding: 5px;
+	 margin: 2px 
+}
+
+
+
+button , .btn{
+	background-color: black;
+	border: none;
+	color: white;
+	padding: -5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	margin: 4px 2px;
+}
